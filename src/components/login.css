@@ -1,0 +1,143 @@
+.overall{
+    background: #00c9e4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.user_icon{
+    width: 20px; 
+    color: #f83263; 
+    margin-top:15px;
+}
+
+.password{
+    display: flex!important;
+    margin-bottom: 2.7rem;
+}
+
+.pass_icon{
+    width: 20px; 
+    color: #f83263; 
+    margin-top: 15px;
+}
+
+#pass{
+    width: 93%;
+}
+
+#eye{
+    width: 7%; 
+    color: #f83263; 
+    margin-top: 15px; 
+    margin-left: -5px; 
+    cursor: pointer; 
+    outline: none;
+}
+
+
+
+
+@media screen and (max-width:350px){
+    #eye{
+      width: 10%;
+      margin-left: -20px;
+    }
+    #pass{
+        width: 70%;
+    }
+}
+
+  @media screen and (max-width:300px){
+    #eye{
+      width: 25%;
+      margin-left: -20px;
+    }
+    #pass{
+        width: 70%;
+    }
+}
+
+.box{
+    width: 95%;
+    max-width: 400px;
+    padding: 7px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align:left;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.56)0px 22px 70px 4px;
+}
+
+.box h1{
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 780;
+    text-align: center;
+    animation:Heading 1s 1s infinite;
+}
+
+/* The Heading color animation
+@keyframes Heading{
+    0%{
+      color: white;
+    }
+    50%{
+      color:  #e91e63;
+    }
+} */
+
+.box input[type="text"], .box input[type="password"]{
+    margin: 1px auto;
+    background: none;
+    display: inline-block;
+    border-radius: 40px 40px 40px 27px;
+    border: 0;
+    font-size: 1.1rem;
+    text-align: left;
+    color: white;
+    outline: none;
+    width: 100%;
+    padding: 14px 10px;
+    border-color: #e91e63;
+    transition: 0.25s
+}
+
+.w3-row{
+    border-radius: 40px 40px 40px 27px;
+}
+
+/*Changing the placeholder's color*/
+.box ::-webkit-input-placeholder{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.box input[type="submit"]{
+    border: 0;
+    position: relative;
+    margin: 1.4rem auto;
+    width: 80%;
+    display: block;
+    height: 50px;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font-size: 24px;
+    font-family: sans-serif;
+    background: linear-gradient(90deg, #03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background-size: 400%;
+    border-radius: 30px;
+    z-index: 1;
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate{
+    0%{background-position: 0;}
+    100%{background-position: 100%;}
+}
