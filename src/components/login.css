@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+
 .overall{
     background: #00c9e4;
     width: 100%;
@@ -81,23 +83,15 @@
     animation:Heading 1s 1s infinite;
 }
 
-/* The Heading color animation
-@keyframes Heading{
-    0%{
-      color: white;
-    }
-    50%{
-      color:  #e91e63;
-    }
-} */
 
-.box input[type="text"], .box input[type="password"]{
+.box input:not(.box input[type="submit"]){
     margin: 1px auto;
     background: none;
     display: inline-block;
     border-radius: 40px 40px 40px 27px;
     border: 0;
     font-size: 1.1rem;
+    font-family: 'Roboto Mono', monospace;
     text-align: left;
     color: white;
     outline: none;
@@ -107,13 +101,19 @@
     transition: 0.25s
 }
 
+.box input:not(.box input[type="submit"])::selection{
+    background: #e91e63;
+    color: white;
+}
+
 .w3-row{
     border-radius: 40px 40px 40px 27px;
 }
 
 /*Changing the placeholder's color*/
 .box ::-webkit-input-placeholder{
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: bold;
 }
 
 .box input[type="submit"]{
