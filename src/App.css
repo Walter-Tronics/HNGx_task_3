@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Roboto+Mono:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Creepster&family=Roboto+Mono:wght@700&display=swap");
 
 /* #root {
   max-width: 1280px;
@@ -6,37 +6,62 @@
   padding: 2rem;
 } */
 
-.brand{
-  font-family: 'Creepster', cursive;
+.brand {
+  font-family: "Creepster", cursive;
   font-size: 2rem;
   line-height: 2.6rem;
-  padding: 0!important;
+  padding: 0 !important;
 }
 
-.notify_cont{
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}
+
+.card {
+  width: 20em !important;
+  height: 13em !important;
+  overflow: hidden;
+}
+
+.card div {
+  background: rgba(0, 0, 0, 0.815);
+  color: white;
+  backdrop-filter: blur(20px);
+  left: 3%;
+  top: 4%;
+}
+
+.card img {
+  object-fit: cover;
+}
+
+.notify_cont {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: min(90%, 300px);
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   background: rgba(128, 128, 128, 0.1);
   border-radius: 5px;
   padding: 2rem;
   border-top: 4px solid #3498db;
 }
 
-.notify_cont p{
+.notify_cont p {
   font-size: 1.2rem;
 }
 
-.notify_cont a{
+.notify_cont a {
   display: block;
   background-color: #3498db;
   color: white;
   margin: 3rem auto 0 auto;
   width: fit-content;
-  padding: .7rem 1rem;
+  padding: 0.7rem 1rem;
   border-radius: 5px;
   text-decoration: none;
 }

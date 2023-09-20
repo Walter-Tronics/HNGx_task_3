@@ -2,6 +2,7 @@ import randomImage from "./images"
 import { LazyLoadImage } from "react-lazy-load-image-component"
 
 
+//Individual image cards
 const Card = ({tag, src}) => {
 
 
@@ -19,10 +20,8 @@ const Card = ({tag, src}) => {
 }
 
 
-
+//The gallery component
 const Gallery = () => {
-
-    console.log(randomImage);
 
     return(
         <>
