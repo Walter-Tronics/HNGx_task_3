@@ -20,8 +20,10 @@ const Login = () => {
     // functions for popup
     const toastId = useRef(null);
 
+    //Loading popup
     const notify = () => toastId.current = toast.info("Logging in, Please wait...", { autoClose: false });
 
+    //Error popup
     const update = () => toast.update(toastId.current, {
         render: "Invalid email or password",
         type: toast.TYPE.ERROR, 
@@ -31,11 +33,13 @@ const Login = () => {
 
     //function for logging in
     async function logInUser(e) {
+        //prevent page reload
         e.preventDefault();
-        notify();
-        
-        console.log(username.current.value, password.current.value);
 
+        //Call loading popup
+        notify();
+
+        //Try to login user
         const { data, error } = await supabase.auth.signInWithPassword({
             email: username.current.value,
             password: password.current.value,
@@ -45,6 +49,7 @@ const Login = () => {
         (data.user) ? window.location = '/gallery' : update();
 
         console.log({data: data, error: error});
+        //clear the input fields
         username.current.value = '';
         password.current.value = '';
     }
