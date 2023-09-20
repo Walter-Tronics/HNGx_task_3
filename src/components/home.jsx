@@ -1,20 +1,25 @@
 import { createClient } from '@supabase/supabase-js'
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
-
-
-
-
-//Create a single supabase client for interacting with your database
-const supabase = createClient('https://seqnuhydxtgenbwvlyap.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNlcW51aHlkeHRnZW5id3ZseWFwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTUwNjcyNTUsImV4cCI6MjAxMDY0MzI1NX0.Dt1KQ9Ri7echHypsQTPjBBJXDpAvVERHKcy4Zg8DIi4');
+import { Link } from "react-router-dom"
+import { useDbase } from '../context';
 
 
 
 const Home = () => {
-    
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const {supabase} = useDbase();
 
+
+    async function isUser() {
+        const { data: { user } } = await supabase.auth.getUser();
+        setIsLoggedIn(user);
+        console.log({data: isLoggedIn, user: user});
+    }
+    
+    
+    
     // functions for popup
     const toastId = useRef(null);
 
@@ -27,8 +32,7 @@ const Home = () => {
     });
 
 
-
-    async function logout (){
+    async function logout(){
         notify();
         try {
             const { error } = await supabase.auth.signOut();
@@ -39,15 +43,45 @@ const Home = () => {
             console.log(err.message);
         }
     }
+    
 
+    useEffect(()=> {
+        isUser();
+    }, []);
 
-    return (
+    
+    return isLoggedIn ? (
         <>
+            <div className="w3-top">
+                <div className="w3-bar w3-white w3-wide w3-padding w3-card">
+                    <Link to='/gallery' className="w3-left w3-bar-item w3-button brand">Gallery</Link>
+                    {/* <!-- Float links to the right. Hide them on small screens --> */}
+                    <div className="w3-right">
+                        <button onClick={logout} className="w3-bar-item w3-button w3-blue w3-round">Log out</button>
+                    </div>
+                </div>
+            </div>
+
             <div>This is the gallery</div>
-            <button onClick={logout}>Logout</button>
+            <button>Logout</button>
             <ToastContainer />
         </>
-    ) 
+    ) : <Notify user={isLoggedIn}/>;
 }
+
+
+const Notify = ({user}) => {
+
+
+    return user == null ? (
+        <>
+            <div className='notify_cont'>
+                <p>Oops! Looks like you need to login first</p>
+                <Link to='/'>Login</Link>
+            </div>
+        </>
+    ) : '';
+}
+
 
 export default Home
