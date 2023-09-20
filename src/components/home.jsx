@@ -4,6 +4,9 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Link } from "react-router-dom"
 import { useDbase } from '../context';
+import Gallery from './gallery';
+import headimg from '../assets/headimg.jpg';
+import Loader from './loader';
 
 
 
@@ -62,8 +65,13 @@ const Home = () => {
                 </div>
             </div>
 
-            <div>This is the gallery</div>
-            <button>Logout</button>
+            {/* <!-- Header --> */}
+            <header className="w3-display-container w3-content w3-wide" style={{maxWidth: '1500px'}} id="home">
+                <img className="w3-image" src={headimg} alt="header" width={1500} height={800} />
+            </header>
+
+            <Gallery />
+
             <ToastContainer />
         </>
     ) : <Notify user={isLoggedIn}/>;
@@ -80,7 +88,7 @@ const Notify = ({user}) => {
                 <Link to='/'>Login</Link>
             </div>
         </>
-    ) : '';
+    ) : <Loader />;
 }
 
 
