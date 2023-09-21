@@ -1,16 +1,34 @@
-@import url("https://fonts.googleapis.com/css2?family=Creepster&family=Roboto+Mono:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Nunito:wght@500&family=Roboto+Mono:wght@700&display=swap');
 
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-} */
 
 .brand {
   font-family: "Creepster", cursive;
   font-size: 2rem;
   line-height: 2.6rem;
+  color: #3498db;
   padding: 0 !important;
+}
+
+#projects > div h3{
+  font-family: "Roboto Mono", monospace;
+}
+
+#projects > div div{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#projects > div span{
+  color: rgba(128, 128, 128, 0.4);
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  padding: .2em .3em;
+  border-radius: 5px;
+  margin-bottom: .3em;
+  font-family: 'Nunito', sans-serif;
+}
+
+#projects > div span + span {
+  margin-left: .3em;
 }
 
 .container {
@@ -18,6 +36,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 1em;
+  margin-bottom: 2rem;
 }
 
 .card {
@@ -37,6 +56,49 @@
 .card img {
   object-fit: cover;
 }
+
+.dragactive{
+  background-color: rgba(128, 128, 128, 0.1);
+}
+
+.drag{
+  filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.8));
+}
+
+.search{
+  display: flex;
+  /* align-items: center; */
+  box-sizing: border-box;
+  border-radius: 7px;
+  margin-top: 1.5rem;
+}
+
+.search input{
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: .5em;
+  border-radius: 7px 0 0 7px;
+  font-family: "Roboto Mono", monospace;
+  border: 0.5px solid rgb(209, 207, 207);
+  transition: 0.2s;
+}
+
+.search input:focus {
+  border-color: rgb(13, 110, 253, 0.6);
+  box-shadow: 0 0 0 0.2em rgb(13, 110, 253, 0.3);
+}
+
+.search button{
+  border-radius: 0 7px 7px 0;
+}
+
+.fa-search{
+  /* flex: 1; */
+  line-height: 1.5em;
+  border-radius: 0 7px 7px 0;
+}
+
 
 .notify_cont {
   position: absolute;
