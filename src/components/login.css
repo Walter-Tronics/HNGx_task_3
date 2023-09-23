@@ -84,7 +84,7 @@
 }
 
 
-.box input:not(.box input[type="submit"]){
+.box input:not(input[type="submit"]){
     margin: 1px auto;
     background: none;
     display: inline-block;
@@ -101,7 +101,7 @@
     transition: 0.25s
 }
 
-.box input:not(.box input[type="submit"])::selection{
+.box input:not(input[type="submit"])::selection{
     background: #e91e63;
     color: white;
 }
@@ -140,4 +140,19 @@
 @keyframes animate{
     0%{background-position: 0;}
     100%{background-position: 100%;}
+}
+
+.signup{
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.signup a{
+    text-decoration: none;
+    background-color: #f83263;
+    padding: .3em .5em;
+    font-size: .9rem;
+    border-radius: 5px;
 }
