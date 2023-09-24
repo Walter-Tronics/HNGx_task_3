@@ -6,9 +6,10 @@ const DbaseContext = createContext(undefined);
 
 
 export const DbaseProvider = ({children}) => {
-    const [signedIn, setSignedIn] = useState(false);
-    const [signedOut, setSignedOut] = useState(false);
-    const [signedUp, setSignedUp] = useState(false);
+    const [auth, setAuth] = useState({
+        signedUp: false,
+        signedIn: false,
+    })
 
     //Create a single supabase client for interacting with your database
     const supabase = createClient('https://seqnuhydxtgenbwvlyap.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNlcW51aHlkeHRnZW5id3ZseWFwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTUwNjcyNTUsImV4cCI6MjAxMDY0MzI1NX0.Dt1KQ9Ri7echHypsQTPjBBJXDpAvVERHKcy4Zg8DIi4');
@@ -17,9 +18,7 @@ export const DbaseProvider = ({children}) => {
     return (
         <DbaseContext.Provider value={{ 
             supabase, 
-            signedIn, setSignedIn, 
-            signedOut, setSignedOut, 
-            signedUp, setSignedUp 
+            auth, setAuth 
             }}>
             {children}
         </DbaseContext.Provider>
