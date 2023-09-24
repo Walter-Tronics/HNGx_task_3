@@ -4,6 +4,7 @@ import { useRef, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useDbase } from '../context';
+import { Link } from 'react-router-dom';
 
 
 
@@ -108,6 +109,10 @@ const Signup = () => {
                     </div>
 
                     <input type="submit" id="submit" value="Register" />
+
+                    <span className='signup'>
+                    Already a member? <Link to='/'>Log in</Link>
+                    </span>
                 </form>
             </div>
             <ToastContainer />
