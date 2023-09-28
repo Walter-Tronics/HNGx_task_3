@@ -1,5 +1,5 @@
-# Photo Gallery
-View live demo here [PhotoGalery](https://anuphotogallery.netlify.app/)
+# Photo Gallery Website
+View live demo here [PhotoGallery](https://walt-image-gallery.netlify.app/)
 ## Overview
 The Photo Gallery is a web application that allows users to explore and manage a collection of images. Users can log in to the gallery, browse through images, and use the Drag-and-Drop feature to rearrange the image order within the gallery. This README provides detailed instructions on how to set up and run the project locally.
 
@@ -14,7 +14,8 @@ Follow these steps to set up the project locally:
 1. **Clone the Repository:** Start by cloning the repository to your local machine using Git:
 
     ```bash
-    git clone https://github.com/sweetARTdev/PhotoGallery.git
+    git clone https://github.com/Walter-Tronics/HNGx_task_3.git
+    ```
 
 2. **Navigate to the Project Directory:** Change your current directory to the project folder:
 
