@@ -31,7 +31,7 @@ To run the Photo Gallery locally, follow these steps:
 1. **Start the Development Server:** Launch the Vite development server:
 npm run dev
 
-2. **Open in Browser:** Open your web browser and navigate to http://localhost:3000 to access the PhotoGallery.
+2. **Open in Browser:** Open your web browser and navigate to http://localhost:1573 to access the PhotoGallery.
 
 ### Features
 - **User Authentication**: Users can sign up and log in to the gallery.
@@ -43,9 +43,8 @@ npm run dev
 ### Technologies Used
 - Vite: The project uses Vite as the build tool and development server.
 - React: The frontend is built with React for UI components.
-- Firebase: Firebase is used for user authentication.
-- Styled-components: The app utilizes styled-components for styling.
-- React DnD: The Drag-and-Drop feature is implemented using React DnD.
+- Supabase: Supabase is used for user authentication.
+- React-beautiful-dnd: The Drag-and-Drop feature is implemented using react-beautiful-dnd.
 
 
 
