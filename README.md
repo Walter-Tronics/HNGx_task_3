@@ -18,20 +18,24 @@ Follow these steps to set up the project locally:
     ```
 
 2. **Navigate to the Project Directory:** Change your current directory to the project folder:
-
-cd PhotoGallery
+    ```bash
+    cd PhotoGallery
+    ```
 
 3. **Install Dependencies:** Install the project dependencies using npm:
-
-npm install
-
+    ```bash
+    npm install
+    ```
+    
 ### Usage
 To run the Photo Gallery locally, follow these steps:
 
 1. **Start the Development Server:** Launch the Vite development server:
-npm run dev
+   ```bash
+    npm run dev
+    ```
 
-2. **Open in Browser:** Open your web browser and navigate to http://localhost:1573 to access the PhotoGallery.
+3. **Open in Browser:** Open your web browser and navigate to http://localhost:1573 to access the PhotoGallery.
 
 ### Features
 - **User Authentication**: Users can sign up and log in to the gallery.
