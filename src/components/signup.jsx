@@ -1,6 +1,6 @@
 import './login.css'
 import { createClient } from '@supabase/supabase-js'
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useDbase } from '../context';
@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 const Signup = () => {
     const [showPass, setShowPass] = useState(false);
-    const {supabase} = useDbase();
+    const {supabase, auth, setAuth} = useDbase();
     const username = useRef(null),
     password = useRef(null);
 
@@ -30,10 +30,12 @@ const Signup = () => {
 
     //Error popup
     const success = () => toast.update(toastId.current, {
-        render: "Account created, redirecting you...",
+        render: "Account created, redirecting you to login...",
         type: toast.TYPE.SUCCESS, 
         autoClose: 5000
     });
+
+    console.log({signedUp: auth.signedUp});
 
 
     //function for logging in
@@ -52,7 +54,12 @@ const Signup = () => {
 
 
         if (data.user) {
+            setAuth({
+                ...auth,
+                signedUp: true
+            });
             success();
+            console.log({signed: auth.signedUp});
             window.location = '/'; //navigate()
         } else {
             update(error.message);
