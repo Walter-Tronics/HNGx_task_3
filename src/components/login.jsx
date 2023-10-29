@@ -1,24 +1,23 @@
 import './login.css'
 import { createClient } from '@supabase/supabase-js'
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useDbase } from '../context';
 import { Link } from 'react-router-dom';
-import Signup from './signup';
 
 
 
 const Login = () => {
     const [showPass, setShowPass] = useState(false);
-    const {supabase} = useDbase();
+    const {supabase, auth, setAuth} = useDbase();
     const username = useRef(null),
     password = useRef(null);
 
-
+    
     // functions for popup
     const toastId = useRef(null);
-
+    
     //Loading popup
     const notify = () => toastId.current = toast.info("Logging in, Please wait...", { autoClose: false });
 
