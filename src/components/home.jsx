@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 import { useDbase } from '../context';
 import Gallery from './gallery';
 import headimg from '../assets/headimg.jpg';
-import Loader from './loader';
+import Loader from './loader/loader'
 
 
 
@@ -20,7 +20,6 @@ const Home = () => {
         setIsLoggedIn(user);
         console.log({data: isLoggedIn, user: user});
     }
-    
     
     
     // functions for popup
