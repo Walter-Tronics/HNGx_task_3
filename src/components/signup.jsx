@@ -84,7 +84,7 @@ const Signup = () => {
                 <form className="box" onSubmit={SignUpUser}>
                     <h1>Register</h1>
 
-                    <div className="w3-row w3-bottombar w3-border-pink w3-rightbar">
+                    <div className="w3-row w3-bottombar w3-rightbar">
                         <div className="w3-col user_icon">
                             <i className="w3-xlarge fa-solid fa-user"></i>
                         </div>
@@ -101,7 +101,7 @@ const Signup = () => {
 
                     <br />
 
-                    <div className="w3-row w3-bottombar w3-border-pink w3-rightbar password">
+                    <div className="w3-row w3-bottombar w3-rightbar password">
                         <div className="w3-third pass_icon">
                             <i className="w3-xlarge fa-solid fa-lock"></i>
                         </div>
