@@ -98,7 +98,7 @@
     outline: none;
     width: 100%;
     padding: 14px 10px;
-    border-color: #3498db;
+    /* border-color: #3498db; */
     transition: 0.25s
 }
 
@@ -112,9 +112,9 @@
 }
 
 /*Changing the placeholder's color*/
-.box ::-webkit-input-placeholder{
-    color: rgba(0, 0, 0, 0.6);
-    font-weight: bold;
+.box input:not(input[type="submit"])::placeholder{
+    color: rgba(0, 0, 0, .6);
+    /* font-weight: bold; */
 }
 
 .box input[type="submit"]{
