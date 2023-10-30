@@ -103,10 +103,11 @@
 }
 
 /*Changing the placeholder's color*/
-/* .box input:not(input[type="submit"])::placeholder{
-    color: rgba(0, 0, 0, 0.6); */
+.box input:not(input[type="submit"])::placeholder{
+    /* color: rgba(0, 0, 0, 0.6); */
+    opacity: .5;
     /* font-weight: bold; */
-/* } */
+}
 
 .box input:not(input[type="submit"])::selection{
     background: #3498db;
