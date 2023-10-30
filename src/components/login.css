@@ -102,6 +102,12 @@
     transition: 0.25s
 }
 
+/*Changing the placeholder's color*/
+/* .box input:not(input[type="submit"])::placeholder{
+    color: rgba(0, 0, 0, 0.6); */
+    /* font-weight: bold; */
+/* } */
+
 .box input:not(input[type="submit"])::selection{
     background: #3498db;
     color: white;
@@ -111,11 +117,6 @@
     border-radius: 40px 40px 40px 27px;
 }
 
-/*Changing the placeholder's color*/
-.box input:not(input[type="submit"])::placeholder{
-    color: rgba(0, 0, 0, .6);
-    /* font-weight: bold; */
-}
 
 .box input[type="submit"]{
     border: 0;
