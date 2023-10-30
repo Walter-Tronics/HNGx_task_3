@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
 
 .overall{
-    background: #00c9e4;
+    background: #fff;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -11,7 +11,7 @@
 
 .user_icon{
     width: 20px; 
-    color: #f83263; 
+    color: #3498db; 
     margin-top:15px;
 }
 
@@ -22,7 +22,7 @@
 
 .pass_icon{
     width: 20px; 
-    color: #f83263; 
+    color: #3498db; 
     margin-top: 15px;
 }
 
@@ -32,7 +32,7 @@
 
 #eye{
     width: 7%; 
-    color: #f83263; 
+    color: #3498db; 
     margin-top: 15px; 
     margin-left: -5px; 
     cursor: pointer; 
@@ -72,12 +72,13 @@
     transform: translate(-50%, -50%);
     text-align:left;
     border-radius: 12px;
-    box-shadow: rgba(0, 0, 0, 0.56)0px 22px 70px 4px;
+    background: rgba(128, 128, 128, 0.1);
+    /* box-shadow: rgba(0, 0, 0, 0.56)0px 22px 70px 4px; */
 }
 
 .box h1{
     text-transform: uppercase;
-    color: #fff;
+    color: #3498db;
     font-weight: 780;
     text-align: center;
     animation:Heading 1s 1s infinite;
@@ -93,16 +94,16 @@
     font-size: 1.1rem;
     font-family: 'Roboto Mono', monospace;
     text-align: left;
-    color: white;
+    color: rgba(0, 0, 0, 0.6);
     outline: none;
     width: 100%;
     padding: 14px 10px;
-    border-color: #e91e63;
+    border-color: #3498db;
     transition: 0.25s
 }
 
 .box input:not(input[type="submit"])::selection{
-    background: #e91e63;
+    background: #3498db;
     color: white;
 }
 
@@ -112,7 +113,7 @@
 
 /*Changing the placeholder's color*/
 .box ::-webkit-input-placeholder{
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(0, 0, 0, 0.6);
     font-weight: bold;
 }
 
@@ -130,7 +131,8 @@
     color: #fff;
     font-size: 24px;
     font-family: sans-serif;
-    background: linear-gradient(90deg, #03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    /* background: linear-gradient(90deg, #03a9f4,#f441a5,#ffeb3b,#03a9f4); */
+    background-color: #3498db;
     background-size: 400%;
     border-radius: 30px;
     z-index: 1;
@@ -138,20 +140,21 @@
 }
 
 @keyframes animate{
-    0%{background-position: 0;}
-    100%{background-position: 100%;}
+    0%{background-position: 0}
+    100%{background-position: 100%}
 }
 
 .signup{
     display: block;
     width: 100%;
     text-align: center;
-    color: white;
+    color: rgba(0, 0, 0, 0.6);
 }
 
 .signup a{
     text-decoration: none;
-    background-color: #f83263;
+    /* background-color: #3498db; */
+    color: #3498db;
     padding: .3em .5em;
     font-size: .9rem;
     border-radius: 5px;
